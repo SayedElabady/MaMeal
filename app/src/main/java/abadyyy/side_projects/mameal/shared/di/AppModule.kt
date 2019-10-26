@@ -20,7 +20,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    internal fun providesSceduler(): Scheduler {
+    internal fun providesScheduler(): Scheduler {
         return Schedulers.io()
     }
 

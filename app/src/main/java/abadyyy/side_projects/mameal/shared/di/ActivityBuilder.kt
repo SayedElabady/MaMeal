@@ -1,7 +1,7 @@
 package abadyyy.side_projects.mameal.shared.di
 
-import abadyyy.side_projects.mameal.features.categories.CategoriesModule
 import abadyyy.side_projects.mameal.features.categories.CategoriesActivity
+import abadyyy.side_projects.mameal.features.categories.CategoriesModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -10,5 +10,5 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilder {
     @ContributesAndroidInjector(
         modules = [CategoriesModule::class])
-     internal abstract fun bindsMainActivityInjector(): CategoriesActivity
+     internal abstract fun bindsCategoriesActivity(): CategoriesActivity
 }

@@ -1,12 +1,11 @@
 package abadyyy.side_projects.mameal.features.categories
 
 import abadyyy.side_projects.mameal.R
-import abadyyy.side_projects.mameal.databinding.ActivityMainBinding
+import abadyyy.side_projects.mameal.databinding.ActivityCategoriesBinding
 import abadyyy.side_projects.mameal.databinding.ItemCategoryBinding
 import abadyyy.side_projects.mameal.shared.di.DaggerAwareViewModelFactory
 import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
 import abadyyy.side_projects.mameal.shared.ui.bindingadapters.SimpleBindingRecyclerAdapter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
@@ -27,12 +26,19 @@ class CategoriesActivity : DaggerAppCompatActivity() {
         R.layout.item_category,
         BR.uiModel
     )
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityCategoriesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (!::binding.isInitialized)
-            binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+            binding = DataBindingUtil.setContentView<ActivityCategoriesBinding>(
+                this@CategoriesActivity,
+                R.layout.activity_categories
+            ).apply {
+                viewModel = this@CategoriesActivity.viewModel
+                lifecycleOwner = this@CategoriesActivity
+            }
+
         initViews()
         observeData()
     }

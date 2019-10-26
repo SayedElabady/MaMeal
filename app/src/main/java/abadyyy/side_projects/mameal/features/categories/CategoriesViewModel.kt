@@ -18,7 +18,7 @@ class CategoriesViewModel @Inject constructor(
 
     private fun fetchCategories() {
         addDisposable(categoriesRepository.getCategories()
-            .doOnSuccess { isLoading.postValue(true) }
+            .doOnSubscribe { isLoading.postValue(true) }
             .doFinally { isLoading.postValue(false) }
             .subscribe({
                 categories.postValue(it)

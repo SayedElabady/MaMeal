@@ -5,4 +5,7 @@ object Constants {
 
     //Endpoints
     const val CATEGORIES_ENDPOINT : String = "${BASE_URL}categories.php"
+
+
+
 }
