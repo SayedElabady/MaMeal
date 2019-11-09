@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MaMeal</string>
+    <string name="server_error_msg">OOOPS, Something Went wrong, we couldn\'t connect to the server</string>
+    <string name="network_error_text">We couldn\'t find Internet Connection, Please enable it for one time at least to load data</string>
 </resources>

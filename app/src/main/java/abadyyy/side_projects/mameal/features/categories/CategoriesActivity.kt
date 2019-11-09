@@ -53,7 +53,6 @@ class CategoriesActivity : DaggerAppCompatActivity() {
 
     private fun observeData() {
         viewModel.categories.observe(this, Observer {
-            Log.v("CategoriesData", it.toString())
             categoriesAdapter.addItems(it)
         })
 

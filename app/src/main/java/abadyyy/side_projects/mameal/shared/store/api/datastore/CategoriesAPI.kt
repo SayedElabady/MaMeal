@@ -9,9 +9,9 @@ import javax.inject.Inject
 import javax.inject.Named
 
 class CategoriesAPI @Inject constructor(
-    val service: IMaMealService,
-    @Named(MapperModule.CATEGORIES_MAPPER) val mapper: Mapper<CategoriesResponse.Category, CategoryEntity>
+    val service: IMaMealService
 ) {
-    fun getCategories() = service.getCategories()
-        .map { it.categories.map { mapper.map(it) } }
+
+    fun getRemoteCategories() = service.getCategories()
+
 }

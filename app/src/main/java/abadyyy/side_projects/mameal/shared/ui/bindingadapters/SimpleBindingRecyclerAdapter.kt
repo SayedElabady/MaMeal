@@ -24,10 +24,6 @@ open class SimpleBindingRecyclerAdapter<UIModel, Binding : ViewDataBinding>(
         notifyDataSetChanged()
     }
 
-    fun resetItems(value: List<UIModel>) {
-        this.items.clear()
-        this.items.addAll(value)
-    }
 
     fun addItem(item: UIModel) {
         val lastPosition = items.size + 1

@@ -7,12 +7,13 @@ import dagger.Module
 import dagger.Provides
 import io.objectbox.Box
 import io.objectbox.BoxStore
+import javax.inject.Singleton
 
 @Module
 class ObjectBoxModule {
 
-
     @Provides
+    @Singleton
     fun provideObjectStore(context: Context): BoxStore {
         return MyObjectBox.builder().androidContext(context).build()
     }
