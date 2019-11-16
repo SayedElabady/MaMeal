@@ -1,13 +1,13 @@
 package abadyyy.side_projects.mameal.features.categories
 
-import abadyyy.side_projects.mameal.features.BaseViewModel
+import abadyyy.side_projects.mameal.shared.ui.BaseViewModel
 import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
-import abadyyy.side_projects.mameal.shared.store.useCase.GetCategoriesListUseCase
+import abadyyy.side_projects.mameal.shared.store.usecase.GetCategoriesListUseCase
 import androidx.lifecycle.MutableLiveData
 import javax.inject.Inject
 
 class CategoriesViewModel @Inject constructor(
-    val categoriesUseCase: GetCategoriesListUseCase
+    private val categoriesUseCase: GetCategoriesListUseCase
 ) : BaseViewModel() {
     val categories = MutableLiveData<List<CategoryEntity>>()
 
@@ -16,7 +16,7 @@ class CategoriesViewModel @Inject constructor(
     }
 
     private fun fetchCategories() {
-        addDisposable(categoriesUseCase.invoke(Unit)
+        categoriesUseCase.invoke(Unit)
             .doOnSubscribe { isLoading.value = true }
             .subscribe({
                 isLoading.postValue(false)
@@ -25,7 +25,7 @@ class CategoriesViewModel @Inject constructor(
                 handleError(it){
                     fetchCategories()
                 }
-            })
+            }.addToDisposableBag()
     }
 
 }

@@ -1,9 +1,9 @@
-package abadyyy.side_projects.mameal.shared.store.useCase
+package abadyyy.side_projects.mameal.data.store.usecase
 
 import io.reactivex.Observable
 
 
-abstract class UseCase<I, O>(val schedulerProvider: ISchedulerProvider) {
+abstract class ObservableUseCase<I, O>(val schedulerProvider: ISchedulerProvider) {
 
     operator fun invoke(
         input: I

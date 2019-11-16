@@ -1,6 +1,6 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
-import abadyyy.side_projects.mameal.shared.App
+import abadyyy.side_projects.mameal.data.App
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component

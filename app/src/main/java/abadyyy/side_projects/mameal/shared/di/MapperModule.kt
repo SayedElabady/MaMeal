@@ -1,9 +1,9 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
-import abadyyy.side_projects.mameal.shared.store.models.CategoriesResponse
-import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
-import abadyyy.side_projects.mameal.shared.store.models.CategoryUIMapper
-import abadyyy.side_projects.mameal.shared.store.models.Mapper
+import abadyyy.side_projects.mameal.data.store.models.CategoriesResponse
+import abadyyy.side_projects.mameal.data.store.models.CategoryEntity
+import abadyyy.side_projects.mameal.data.store.models.CategoryUIMapper
+import abadyyy.side_projects.mameal.data.store.models.Mapper
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named

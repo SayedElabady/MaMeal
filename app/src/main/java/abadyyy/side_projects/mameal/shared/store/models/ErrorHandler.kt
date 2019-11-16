@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.shared.store.models
+package abadyyy.side_projects.mameal.data.store.models
 
 import retrofit2.HttpException
 import java.io.IOException

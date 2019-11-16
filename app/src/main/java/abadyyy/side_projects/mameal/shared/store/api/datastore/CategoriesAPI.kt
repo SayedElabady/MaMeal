@@ -1,12 +1,7 @@
-package abadyyy.side_projects.mameal.shared.store.api.datastore
+package abadyyy.side_projects.mameal.data.store.api.datastore
 
-import abadyyy.side_projects.mameal.shared.di.MapperModule
-import abadyyy.side_projects.mameal.shared.store.api.IMaMealService
-import abadyyy.side_projects.mameal.shared.store.models.CategoriesResponse
-import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
-import abadyyy.side_projects.mameal.shared.store.models.Mapper
+import abadyyy.side_projects.mameal.data.store.api.IMaMealService
 import javax.inject.Inject
-import javax.inject.Named
 
 class CategoriesAPI @Inject constructor(
     val service: IMaMealService

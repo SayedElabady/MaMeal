@@ -1,20 +1,21 @@
 package abadyyy.side_projects.mameal.features.categories
 
 import abadyyy.side_projects.mameal.shared.di.ViewModelKey
-import abadyyy.side_projects.mameal.shared.store.api.datastore.CategoriesAPI
 import abadyyy.side_projects.mameal.shared.store.dao.CategoriesDao
+import abadyyy.side_projects.mameal.shared.store.models.CategoriesResponse
 import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
+import abadyyy.side_projects.mameal.shared.store.models.CategoryUIMapper
+import abadyyy.side_projects.mameal.shared.store.models.Mapper
 import abadyyy.side_projects.mameal.shared.store.repositories.CategoriesRepository
 import abadyyy.side_projects.mameal.shared.store.repositories.ICategoriesRepository
 import androidx.lifecycle.ViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 import io.objectbox.Box
 import io.objectbox.BoxStore
-import io.reactivex.Scheduler
+import javax.inject.Singleton
 
 @Module(includes = [CategoriesModule.Extension::class])
 abstract class CategoriesModule {
@@ -39,6 +40,12 @@ abstract class CategoriesModule {
         fun provideCategoriesDao(box : Box<CategoryEntity>): CategoriesDao {
             return CategoriesDao(box)
         }
+        @Provides
+        @Singleton
+        fun provideCategoriesMapper(): Mapper<CategoriesResponse.Category, CategoryEntity> {
+            return CategoryUIMapper()
+        }
+
     }
 
 }

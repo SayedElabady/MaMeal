@@ -1,9 +1,7 @@
-package abadyyy.side_projects.mameal.shared.extension
+package abadyyy.side_projects.mameal.data.extension
 
 import io.reactivex.Observable
-import io.reactivex.Single
 
-fun <T> List<T>.toSingle() = Single.just(this)
 
 fun <T> List<T>.toObservable() = Observable.just(this)
 

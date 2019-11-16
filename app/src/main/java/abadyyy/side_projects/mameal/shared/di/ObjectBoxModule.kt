@@ -1,11 +1,9 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
-import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
-import abadyyy.side_projects.mameal.shared.store.models.MyObjectBox
+import abadyyy.side_projects.mameal.data.store.models.MyObjectBox
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import io.objectbox.Box
 import io.objectbox.BoxStore
 import javax.inject.Singleton
 

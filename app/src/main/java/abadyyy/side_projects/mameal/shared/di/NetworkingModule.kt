@@ -1,15 +1,14 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
-import abadyyy.side_projects.mameal.shared.Constants
-import abadyyy.side_projects.mameal.shared.store.api.IMaMealService
-import abadyyy.side_projects.mameal.shared.store.api.interceptor.JsonInterceptor
+import abadyyy.side_projects.mameal.data.Constants
+import abadyyy.side_projects.mameal.data.store.api.CachePolicy
+import abadyyy.side_projects.mameal.data.store.api.IMaMealService
+import abadyyy.side_projects.mameal.data.store.api.interceptor.JsonInterceptor
 import android.content.Context
-import android.os.Build
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -25,9 +24,10 @@ class NetworkingModule {
     fun provideApiClient(
         context: Context,
         jsonInterceptor: JsonInterceptor,
-        gson: Gson
+        gson: Gson,
+        cachePolicy: CachePolicy
     ): Retrofit {
-        val cacheSize = 10 * 1024 * 1024
+        val cacheSize = cachePolicy.provideCacheSize()
         val dir = context.cacheDir
         val cache = Cache(dir, cacheSize.toLong())
 

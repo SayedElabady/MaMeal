@@ -4,10 +4,10 @@
     <data>
 
         <import type="android.view.View" />
-
+            <import type="abadyyy.side_projects.mameal.shared.store.models.ErrorModel"/>
         <variable
             name="viewModel"
-            type="abadyyy.side_projects.mameal.features.BaseViewModel" />
+            type="abadyyy.side_projects.mameal.shared.ui.BaseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="@{() -> viewModel.onErrorClicked()}"
-            android:visibility="@{ viewModel.notAvailableError == true ? View.VISIBLE : View.GONE, default=gone }"
+            android:visibility="@{ viewModel.error instanceof ErrorModel.NotAvailable ? View.VISIBLE : View.GONE, default=gone }"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="@{() -> viewModel.onErrorClicked()}"
-            android:visibility="@{ viewModel.networkError == true ? View.VISIBLE : View.GONE, default=gone }"
+            android:visibility="@{ viewModel.error instanceof ErrorModel.NetworkError ? View.VISIBLE : View.GONE, default=gone }"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

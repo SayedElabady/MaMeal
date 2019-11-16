@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.shared.ui.bindingadapters
+package abadyyy.side_projects.mameal.data.ui.bindingadapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.shared.store.useCase
+package abadyyy.side_projects.mameal.data.store.usecase
 
 import io.reactivex.Scheduler
 

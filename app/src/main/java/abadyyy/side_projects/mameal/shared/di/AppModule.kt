@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
 import android.app.Application
 import android.content.Context

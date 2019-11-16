@@ -1,12 +1,8 @@
-package abadyyy.side_projects.mameal.shared.di
+package abadyyy.side_projects.mameal.data.di
 
-import abadyyy.side_projects.mameal.features.categories.CategoriesModule
-import abadyyy.side_projects.mameal.shared.di.Constants.REGULAR_SCHEDULER_PROVIDER
-import abadyyy.side_projects.mameal.shared.di.Constants.UI_OBSERVER_SCHEDULER_PROVIDER
-import abadyyy.side_projects.mameal.shared.store.models.ErrorHandler
-import abadyyy.side_projects.mameal.shared.store.models.IErrorHandler
-import abadyyy.side_projects.mameal.shared.store.repositories.ICategoriesRepository
-import abadyyy.side_projects.mameal.shared.store.useCase.*
+import abadyyy.side_projects.mameal.data.di.Constants.REGULAR_SCHEDULER_PROVIDER
+import abadyyy.side_projects.mameal.data.di.Constants.UI_OBSERVER_SCHEDULER_PROVIDER
+import abadyyy.side_projects.mameal.data.store.usecase.*
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named

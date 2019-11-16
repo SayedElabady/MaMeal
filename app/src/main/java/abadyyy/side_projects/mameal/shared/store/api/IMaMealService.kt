@@ -1,7 +1,7 @@
-package abadyyy.side_projects.mameal.shared.store.api
+package abadyyy.side_projects.mameal.data.store.api
 
-import abadyyy.side_projects.mameal.shared.Constants
-import abadyyy.side_projects.mameal.shared.store.models.CategoriesResponse
+import abadyyy.side_projects.mameal.data.Constants
+import abadyyy.side_projects.mameal.data.store.models.CategoriesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 

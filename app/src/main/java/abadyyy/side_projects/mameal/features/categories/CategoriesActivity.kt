@@ -17,12 +17,11 @@ import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
 class CategoriesActivity : DaggerAppCompatActivity() {
+
     @Inject
     lateinit var factory: DaggerAwareViewModelFactory
-
-    val viewModel by lazy { ViewModelProvider(this, factory).get(CategoriesViewModel::class.java) }
-
-    val categoriesAdapter = SimpleBindingRecyclerAdapter<CategoryEntity, ItemCategoryBinding>(
+    private val viewModel by lazy { ViewModelProvider(this, factory).get(CategoriesViewModel::class.java) }
+    private val categoriesAdapter = SimpleBindingRecyclerAdapter<CategoryEntity, ItemCategoryBinding>(
         R.layout.item_category,
         BR.uiModel
     )
@@ -30,15 +29,13 @@ class CategoriesActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (!::binding.isInitialized)
-            binding = DataBindingUtil.setContentView<ActivityCategoriesBinding>(
-                this@CategoriesActivity,
-                R.layout.activity_categories
-            ).apply {
-                viewModel = this@CategoriesActivity.viewModel
-                lifecycleOwner = this@CategoriesActivity
-            }
-
+        binding = DataBindingUtil.setContentView<ActivityCategoriesBinding>(
+            this@CategoriesActivity,
+            R.layout.activity_categories
+        ).apply {
+            viewModel = this@CategoriesActivity.viewModel
+            lifecycleOwner = this@CategoriesActivity
+        }
         initViews()
         observeData()
     }

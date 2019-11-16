@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.shared.ui
+package abadyyy.side_projects.mameal.data.ui
 
 import abadyyy.side_projects.mameal.R
 import android.content.Context
