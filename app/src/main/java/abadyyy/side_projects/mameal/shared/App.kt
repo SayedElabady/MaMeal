@@ -1,6 +1,6 @@
-package abadyyy.side_projects.mameal.data
+package abadyyy.side_projects.mameal.shared
 
-import abadyyy.side_projects.mameal.data.di.DaggerAppComponent
+import abadyyy.side_projects.mameal.shared.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

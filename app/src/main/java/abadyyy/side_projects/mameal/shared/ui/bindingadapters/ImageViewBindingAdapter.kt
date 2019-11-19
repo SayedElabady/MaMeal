@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.ui.bindingadapters
+package abadyyy.side_projects.mameal.shared.ui.bindingadapters
 
 
 import android.graphics.drawable.Drawable

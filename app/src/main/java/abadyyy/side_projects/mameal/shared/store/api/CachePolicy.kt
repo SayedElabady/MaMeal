@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.store.api
+package abadyyy.side_projects.mameal.shared.store.api
 
 import javax.inject.Inject
 

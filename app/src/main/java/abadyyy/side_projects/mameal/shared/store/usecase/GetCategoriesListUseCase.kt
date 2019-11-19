@@ -1,7 +1,7 @@
-package abadyyy.side_projects.mameal.data.store.usecase
+package abadyyy.side_projects.mameal.shared.store.usecase
 
-import abadyyy.side_projects.mameal.data.di.Constants
-import abadyyy.side_projects.mameal.data.store.models.CategoryEntity
+import abadyyy.side_projects.mameal.shared.di.Constants
+import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
 import io.reactivex.Observable
 import javax.inject.Inject
 import javax.inject.Named

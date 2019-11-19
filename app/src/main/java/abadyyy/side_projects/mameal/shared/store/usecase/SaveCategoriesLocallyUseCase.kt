@@ -1,18 +1,18 @@
-package abadyyy.side_projects.mameal.data.store.usecase
+package abadyyy.side_projects.mameal.shared.store.usecase
 
-import abadyyy.side_projects.mameal.data.di.Constants
-import abadyyy.side_projects.mameal.data.di.MapperModule
-import abadyyy.side_projects.mameal.data.store.dao.CategoriesDao
-import abadyyy.side_projects.mameal.data.store.models.CategoriesResponse
-import abadyyy.side_projects.mameal.data.store.models.CategoryEntity
-import abadyyy.side_projects.mameal.data.store.models.Mapper
+import abadyyy.side_projects.mameal.shared.di.Constants
+import abadyyy.side_projects.mameal.shared.di.MapperModule
+import abadyyy.side_projects.mameal.shared.store.models.CategoriesResponse
+import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
+import abadyyy.side_projects.mameal.shared.store.models.Mapper
+import abadyyy.side_projects.mameal.shared.store.repositories.CategoriesRepository
 import io.reactivex.Observable
 import javax.inject.Inject
 import javax.inject.Named
 
 class SaveCategoriesLocallyUseCase @Inject constructor(
     @Named(Constants.REGULAR_SCHEDULER_PROVIDER) provider: ISchedulerProvider,
-    private val dao: CategoriesDao,
+    private val repository: CategoriesRepository,
     @Named(MapperModule.CATEGORIES_MAPPER)
     private val mapper: Mapper<CategoriesResponse.Category, CategoryEntity>
 ) :
@@ -23,7 +23,7 @@ class SaveCategoriesLocallyUseCase @Inject constructor(
                 list.map { mapper.map(it) }
             }.firstOrError()
             .doOnSuccess {
-                dao.replaceAll(*it.toTypedArray())
+                repository.replaceLocalCategories(it)
             }.toObservable()
     }
 

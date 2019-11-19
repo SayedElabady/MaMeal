@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.extension
+package abadyyy.side_projects.mameal.shared.extension
 
 import io.reactivex.Observable
 

@@ -1,9 +1,9 @@
-package abadyyy.side_projects.mameal.data.di
+package abadyyy.side_projects.mameal.shared.di
 
-import abadyyy.side_projects.mameal.data.Constants
-import abadyyy.side_projects.mameal.data.store.api.CachePolicy
-import abadyyy.side_projects.mameal.data.store.api.IMaMealService
-import abadyyy.side_projects.mameal.data.store.api.interceptor.JsonInterceptor
+import abadyyy.side_projects.mameal.shared.Constants
+import abadyyy.side_projects.mameal.shared.store.api.CachePolicy
+import abadyyy.side_projects.mameal.shared.store.api.IMaMealService
+import abadyyy.side_projects.mameal.shared.store.api.interceptor.JsonInterceptor
 import android.content.Context
 import com.google.gson.Gson
 import dagger.Module

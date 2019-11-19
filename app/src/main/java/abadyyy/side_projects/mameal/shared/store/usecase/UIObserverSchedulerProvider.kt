@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.store.usecase
+package abadyyy.side_projects.mameal.shared.store.usecase
 
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers

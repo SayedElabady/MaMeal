@@ -7,7 +7,6 @@ import abadyyy.side_projects.mameal.shared.di.DaggerAwareViewModelFactory
 import abadyyy.side_projects.mameal.shared.store.models.CategoryEntity
 import abadyyy.side_projects.mameal.shared.ui.bindingadapters.SimpleBindingRecyclerAdapter
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.library.baseAdapters.BR
 import androidx.lifecycle.Observer

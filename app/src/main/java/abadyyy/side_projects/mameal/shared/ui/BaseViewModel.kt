@@ -1,8 +1,8 @@
-package abadyyy.side_projects.mameal.data.ui
+package abadyyy.side_projects.mameal.shared.ui
 
-import abadyyy.side_projects.mameal.data.store.models.ErrorHandler
-import abadyyy.side_projects.mameal.data.store.models.ErrorModel
-import abadyyy.side_projects.mameal.data.store.models.IErrorHandler
+import abadyyy.side_projects.mameal.shared.store.models.ErrorHandler
+import abadyyy.side_projects.mameal.shared.store.models.ErrorModel
+import abadyyy.side_projects.mameal.shared.store.models.IErrorHandler
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable

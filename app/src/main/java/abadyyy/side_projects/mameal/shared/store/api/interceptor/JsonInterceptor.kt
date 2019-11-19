@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.store.api.interceptor
+package abadyyy.side_projects.mameal.shared.store.api.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

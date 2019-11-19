@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.di
+package abadyyy.side_projects.mameal.shared.di
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module

@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data.di
+package abadyyy.side_projects.mameal.shared.di
 
 import abadyyy.side_projects.mameal.features.categories.CategoriesActivity
 import abadyyy.side_projects.mameal.features.categories.CategoriesModule

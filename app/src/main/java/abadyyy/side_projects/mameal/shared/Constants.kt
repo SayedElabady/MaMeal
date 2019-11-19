@@ -1,4 +1,4 @@
-package abadyyy.side_projects.mameal.data
+package abadyyy.side_projects.mameal.shared
 
 object Constants {
     const val BASE_URL = "https://www.themealdb.com/api/json/v1/1/"

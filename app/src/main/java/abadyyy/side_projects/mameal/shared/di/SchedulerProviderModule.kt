@@ -1,8 +1,8 @@
-package abadyyy.side_projects.mameal.data.di
+package abadyyy.side_projects.mameal.shared.di
 
-import abadyyy.side_projects.mameal.data.di.Constants.REGULAR_SCHEDULER_PROVIDER
-import abadyyy.side_projects.mameal.data.di.Constants.UI_OBSERVER_SCHEDULER_PROVIDER
-import abadyyy.side_projects.mameal.data.store.usecase.*
+import abadyyy.side_projects.mameal.shared.di.Constants.REGULAR_SCHEDULER_PROVIDER
+import abadyyy.side_projects.mameal.shared.di.Constants.UI_OBSERVER_SCHEDULER_PROVIDER
+import abadyyy.side_projects.mameal.shared.store.usecase.*
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
